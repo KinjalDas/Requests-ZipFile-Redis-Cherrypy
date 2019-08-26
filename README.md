@@ -1,5 +1,5 @@
-# Requests-ZipFile-Redis-Cherrypy
-A repo for basic usage of requests, zipfile, redis and cherrypy python libraries
+# Requests-ZipFile-Redis-Cherrypy-jQuery
+A repo for basic usage of requests, zipfile, redis , jQuery and cherrypy.
 
 There are two parts of this repository : 
 
