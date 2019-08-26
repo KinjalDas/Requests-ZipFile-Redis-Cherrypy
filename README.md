@@ -5,7 +5,7 @@ There are two parts of this repository :
 
 1. download_bhavcopy_equity_files.py : a script to download, unzip, parse a CSV file and populate a REDIS instance according to the respective entries. 
 
-Upon visiting the link "https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx" and examining the "Bhavcopy" CSV file link, we see that part of the link is actually the present date, or last working day (in case of weekends). We download a .zip archive from the link based on this rationale. We unzip and parse the entries in the CSV based on native python libraries and update these entries in Redis DB using a "HASHES" , the key being a counter variable and value being the parsed dictionary. Lastly, we update the counter variable in the DB in case if required later.
+Upon visiting the link "https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx" and examining the "Bhavcopy" CSV file link, we see that part of the link is actually the present date, or last working day (in case of weekends). We download a .zip archive from the link based on this rationale. We unzip and parse the entries in the CSV using native python libraries and update these entries in Redis DB using a "HASHES" , the key being a counter variable and value being the parsed dictionary. Lastly, we update the counter variable in the DB in case if required later.
 
 2.web_app.py : Front-End Web application containing a Web App and a REST API to provide a layer of communication with the updated Redis DB
 
