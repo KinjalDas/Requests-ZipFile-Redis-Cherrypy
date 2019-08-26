@@ -1,4 +1,5 @@
 import cherrypy, redis, os, json
+from cherrypy.process.plugins import Daemonizer
 
 class HelloWorld(object):
 	@cherrypy.expose
@@ -62,4 +63,8 @@ if __name__ == '__main__':
 	webapp = HelloWorld()
 	webapp.generator = DBValuesGenerator(redisClient)
 	cherrypy.config.update({'server.socket_host': '0.0.0.0', 'server.socket_port': 80})
-	cherrypy.quickstart(webapp, '/', conf)
+	Daemonizer(cherrypy.engine).subscribe()
+	#cherrypy.quickstart(webapp, '/', conf)
+	cherrypy.tree.mount(webapp, '/', conf)
+	cherrypy.engine.start()
+	cherrypy.engine.block()
