@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         $.ajax({
         type: 'GET',
-        url: 'http://127.0.0.1:8080/generator',
+        url: 'http://0.0.0.0/generator',
         dataType: 'json',
         success: function(data) {
             var rows = [];
@@ -20,7 +20,7 @@ $(document).ready(function() {
           $("#search-table > tbody").empty();
           $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1:8080/generator',
+            url: 'http://0.0.0.0/generator',
             data: {"search_string": $("#search-text").val().toUpperCase()},
             dataType: 'json',
             success: function(data) {

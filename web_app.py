@@ -61,5 +61,5 @@ if __name__ == '__main__':
 	redisClient = redis.StrictRedis(host='localhost',port=6379,db=0)
 	webapp = HelloWorld()
 	webapp.generator = DBValuesGenerator(redisClient)
-	cherrypy.config.update({'server.socket_host': '0.0.0.0','server.socket_port': 80})
+	cherrypy.config.update({'server.socket_host': '0.0.0.0'})
 	cherrypy.quickstart(webapp, '/', conf)
