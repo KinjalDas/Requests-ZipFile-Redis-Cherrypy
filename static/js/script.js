@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         $.ajax({
         type: 'GET',
-        url: 'http://ec2-18-220-250-1.us-east-2.compute.amazonaws.com/generator',
+        url: 'http://ec2-18-220-250-1.us-east-2.compute.amazonaws.com/generator', //0.0.0.0 for local installation
         dataType: 'json',
         success: function(data) {
             var rows = [];
@@ -20,7 +20,7 @@ $(document).ready(function() {
           $("#search-table > tbody").empty();
           $.ajax({
             type: 'POST',
-            url: 'http://ec2-18-220-250-1.us-east-2.compute.amazonaws.com/generator',
+            url: 'http://ec2-18-220-250-1.us-east-2.compute.amazonaws.com/generator', //0.0.0.0 for local installation
             data: {"search_string": $("#search-text").val().toUpperCase()},
             dataType: 'json',
             success: function(data) {
