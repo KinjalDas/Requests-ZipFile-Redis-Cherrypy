@@ -30,7 +30,7 @@ $(document).ready(function() {
             });
             console.log(rows.join(''));
             $('#search-table').append(rows.join(''));
-            $('#search-table').css("display", "block");
+            $('#search-table').css("display", "");
           }
           })
         });

@@ -6,6 +6,7 @@
 	<script src="/static/js/script.js"></script>
   </head>
   <body>
+  <div id="tables">
     <table id="record-table">
       <caption>TOP 10 RECORDS</caption>
       <thead>
@@ -19,13 +20,16 @@
       </tr>
       </thead>
     </table>
+	</div>
     <br/>
     <center>
     <input type="text" name="search-text" placeholder="Enter Search Text" id="search-text">
     <input type="button" name="OK" value="search" id="search-button">
     </center>
+	<br/>
+	<div id="tables">
     <table id="search-table">
-      <caption>TOP 10 RECORDS</caption>
+      <caption>SEARCH RESULTS</caption>
       <thead>
       <tr>
         <th>CODE</th>
@@ -37,5 +41,6 @@
       </tr>
       </thead>
     </table>
+	</div>
   </body>
 </html>
