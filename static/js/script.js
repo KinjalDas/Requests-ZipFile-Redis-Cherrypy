@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- <link href="/static/css/style.css" rel="stylesheet"> -->
-    <style type="text/css">
-      table, th, td {
-        border: 1px solid black;
-        width:100%;
-      }
-    </style>
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
+$(document).ready(function() {
 
         $('#search-table').css("display", "none");
 
@@ -47,39 +35,3 @@
           })
         });
       });
-    </script>
-  </head>
-  <body>
-    <table id="record-table">
-      <caption>TOP 10 RECORDS</caption>
-      <thead>
-      <tr>
-        <th>CODE</th>
-        <th>NAME</th>
-        <th>OPEN</th>
-        <th>HIGH</th>
-        <th>LOW</th>
-        <th>CLOSE</th>
-      </tr>
-      </thead>
-    </table>
-    <br/>
-    <center>
-    <input type="text" name="search-text" placeholder="Enter Search Text" id="search-text">
-    <input type="button" name="OK" value="search" id="search-button">
-    </center>
-    <table id="search-table">
-      <caption>TOP 10 RECORDS</caption>
-      <thead>
-      <tr>
-        <th>CODE</th>
-        <th>NAME</th>
-        <th>OPEN</th>
-        <th>HIGH</th>
-        <th>LOW</th>
-        <th>CLOSE</th>
-      </tr>
-      </thead>
-    </table>
-  </body>
-</html>

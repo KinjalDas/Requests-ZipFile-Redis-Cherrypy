@@ -3,7 +3,7 @@ import cherrypy, redis, os, json
 class HelloWorld(object):
 	@cherrypy.expose
 	def index(self):
-		return open('index.html')
+		return open('./static/html/index.html')
 
 @cherrypy.expose
 class DBValuesGenerator(object):
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         },
         '/static': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': './public'
+            'tools.staticdir.dir': './static'
         }
     }
 	redisClient = redis.StrictRedis(host='localhost',port=6379,db=0)
